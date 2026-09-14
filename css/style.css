@@ -1,0 +1,114 @@
+body {
+    background-image: url("../assets/images/image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    color:  #a576bb;
+}
+
+.container {
+    background-color: rgba(3, 3, 3, 0.6);
+    backdrop-filter: blur(10px);
+    width: 600px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+h1{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-group> label {
+    width: 70px;
+    padding-top: 8px;
+}
+
+.input-area {
+    flex: 1;
+}
+
+input[type="text"],
+input[type="email"],
+
+select {
+    width: 500px;
+    padding: 8px;
+    border: 1px solid rgb(80, 42, 83);
+    border-radius: 5px;
+    box-sizing: border-box;
+   
+    background: rgba(0, 0, 0, 0.25);
+    color: #fcfbfb;
+    backdrop-filter: blur(10px);
+}
+
+input::placeholder{
+    color: #524a57;
+}
+
+select {
+    color: #524a57;
+}
+
+select option {
+    color: #ffffff;
+    background-color: #0f0b0f;
+}
+
+select.selected {
+    color: white;
+}
+
+.error {
+    display: block;
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.checkbox {
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(145, 0, 158);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-area {
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgb(148, 37, 158);
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+#hasil {
+    margin-top: 20px;
+}
