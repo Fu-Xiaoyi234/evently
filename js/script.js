@@ -10,18 +10,22 @@ const tombol = document.getElementById("btndaftar");
 
 const hasil = document.getElementById("hasil");
 
+// mengubah tampilan select kelas setelah user memilih kelas//
 kelas.addEventListener("change", function (){
     kelas.classList.add("selected");
 });
 
+// mengubah tampilan select jurusan setelah user memilih jurusan//
 jurusan.addEventListener("change", function (){
     jurusan.classList.add("selected");
 });
 
+// mangaktifkan/menonaktifkan tombol daftar berdasarkan checkbox//
 syarat.addEventListener("change", function () {
     tombol.disabled = !syarat.checked;
 });
 
+// menjalankan validasi ketika form dikirim//
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -41,7 +45,7 @@ form.addEventListener("submit", function (event) {
 
     let valid = true
 
-//Nama//
+//validasi nama//
     if (nama.value.trim() === "") {
         console.log("validasi nama jalan")
 
@@ -55,7 +59,7 @@ form.addEventListener("submit", function (event) {
         valid = false; 
     }
 
-//Email//
+// validasi rmail//
     if(email.value.trim() === "") {
         document.getElementById("erroremail").textContent = "*Email tidak boleh kosong.";
         email.style.border = "2px solid red";
@@ -67,35 +71,35 @@ form.addEventListener("submit", function (event) {
         valid = false; 
      }
 
-//Kelas//
+//validasi kelas//
 if(kelas.value.trim() === "") {
         document.getElementById("errorkelas").textContent = "*Silahkan pilih kelas.";
         kelas.style.border = "2px solid red";
         valid = false;
     }
 
-//jurusan//
+//validasi jurusan//
 if(jurusan.value === "") {
         document.getElementById("errorjurusan").textContent = "*Silahkan pilih jurusan.";
         jurusan.style.border = "2px solid red";
         valid = false;
 }
 
-//kegiatan//
+//validasi kegiatan//
 if(kegiatan.value.trim() === "") {
         document.getElementById("errorkegiatan").textContent = "*Kegiata tidak boleh kosong.";
         kegiatan.style.border = "2px solid red";
         valid = false;
     }
 
-//syarat//
+//validasi syarat dan ketentuan//
 if (!syarat.checked) {
     hasil.innerHTML = "Anda harus menyetujui syarat & ketentuan.";
     hasil.style.color = "red";
     valid = false;
 }
 
-//tombol//
+//menampilkan hasil jika semua data valid//
 if (valid) {
     hasil.innerHTML = `<strong>Pendaftaran berhasil!</strong>
     <br></br>
