@@ -43,45 +43,47 @@ form.addEventListener("submit", function (event) {
 
 //Nama//
     if (nama.value.trim() === "") {
-        document.getElementById("errornama").textContent = "Nama Tidak Boleh Kosong.";
+        console.log("validasi nama jalan")
+
+        document.getElementById("errornama").textContent = "*Nama Minimal 3 Karakter.";
         nama.style.border = "2px solid red";
         valid = false;
     }
     else if (nama.value.trim().length < 3){
-        document.getElementById("errornama"). textContent = "Nama Minimal 3 Karakter.";
+        document.getElementById("errornama"). textContent = "*Nama Minimal 3 Karakter.";
         nama.style.border = "2px solid red";
         valid = false; 
     }
 
 //Email//
     if(email.value.trim() === "") {
-        document.getElementById("erroremail").textContent = "Email tidak boleh kosong.";
+        document.getElementById("erroremail").textContent = "*Email tidak boleh kosong.";
         email.style.border = "2px solid red";
         valid = false;
     }
     else if (!email.value.includes("@")) {
-        document.getElementById("erroremail"). textContent = "Email harus mengandung karakter @.";
+        document.getElementById("erroremail"). textContent = "*Email harus mengandung karakter @.";
         email.style.border = "2px solid red";
         valid = false; 
-}
+     }
 
 //Kelas//
 if(kelas.value.trim() === "") {
-        document.getElementById("errorkelas").textContent = "Silahkan pilih kelas.";
+        document.getElementById("errorkelas").textContent = "*Silahkan pilih kelas.";
         kelas.style.border = "2px solid red";
         valid = false;
     }
 
 //jurusan//
 if(jurusan.value === "") {
-        document.getElementById("errorjurusan").textContent = "Silahkan pilih jurusan.";
+        document.getElementById("errorjurusan").textContent = "*Silahkan pilih jurusan.";
         jurusan.style.border = "2px solid red";
         valid = false;
 }
 
 //kegiatan//
 if(kegiatan.value.trim() === "") {
-        document.getElementById("errorkegiatan").textContent = "Kegiata tidak boleh kosong.";
+        document.getElementById("errorkegiatan").textContent = "*Kegiata tidak boleh kosong.";
         kegiatan.style.border = "2px solid red";
         valid = false;
     }
@@ -107,11 +109,19 @@ if (valid) {
     <br>
     Kegiatan: ${kegiatan.value} `;
 
-    hasil.style.color = "green";
+    hasil.style.color = "White";
 
     form.reset ();
     kelas.classList.remove ("selected");
     jurusan.classList.remove ("selected");
     tombol.disabled = true;
+
+    console.log("Data_pendaftaran;", {
+        nama: nama.value,
+        email: email.value,
+        kelas: kelas.value,
+        jurusan: jurusan.value,
+        kegiatan: kegiatan.value
+    })
 }
 });

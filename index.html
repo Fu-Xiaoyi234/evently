@@ -11,14 +11,16 @@
 
     <div class="container">
         <h1>E V E N T L Y</h1>
-        <form id="formPendaftaran">
+        <div id="hasil"></div>
+
+        <form id="formPendaftaran" novalidate>
 
         <div class="form-group">
                 <label for="nama">Nama:</label>
         
             <div class="input-area">
-                <input type="text" id="nama" placeholder="Masukan Nama Lengkap" required>
-                <small id="errornama" class="Error"></small>
+                <input type="text" id="nama" placeholder="Masukan Nama Lengkap">
+                <small id="errornama" class="error"></small>
             </div>
         </div>
         
@@ -26,8 +28,8 @@
                 <label for="Email">Email:</label>
             
             <div class="input-area">
-                <input type="email" id="email" placeholder="Masukan Email" required>
-                <small id="erroremail" class="Error"></small>
+                <input type="email" id="email" placeholder="Masukan Email">
+                <small id="erroremail" class="error"></small>
             </div>
         </div>
          
@@ -35,7 +37,7 @@
             <label for="kelas">kelas:</label>
 
             <div class="input-area">
-                <select name="kelas" id="kelas" required>
+                <select name="kelas" id="kelas">
         <option value="" selected disabled>Pilih Kelas</option>
         <option value="X PPLG 1"> X PPLG 1 </option>
         <option value="X PPLG 2"> X PPLG 2 </option>
@@ -66,7 +68,7 @@
         <option value="XII PF 1"> XII PF 1 </option>
         <option value="XII PF 2"> XII PF 2 </option>
         </select>
-        <small id="errorkelas" class="Error"></small>
+        <small id="errorkelas" class="error"></small>
             </div>
     </div>
 
@@ -74,13 +76,14 @@
         <label for="jurusan">Jurusan:</label>
 
         <div class="input-area">
-        <select name="jurusan" id="jurusan" required>
+        <select name="jurusan" id="jurusan">
         <option value="" selected disabled>Pilih Jurusan</option>
         <option value="RPL">RPL</option>
         <option value="TJA">TJA</option>
         <option value="TKJ">TKJ</option>
         <option value="PF">PF</option>
         </select>
+        <small id="errorjurusan" class="error"></small>
         </div>
     </div>
 
@@ -89,7 +92,7 @@
 
         <div class="input-area">
         <input type="text" id="kegiatan" placeholder="Masukan Kegiatan">
-        <small id="errorkegiatan" class="Error"></small>
+        <small id="errorkegiatan" class="error"></small>
         </div>
     </div>
 
@@ -102,8 +105,6 @@
         <button type="submit" id="btndaftar" disabled>Daftar Sekarang</button>
     </div>
     
-        <div id="hasil"></div>
-
         </form>
     </div>
     <script src="js/script.js"></script>
