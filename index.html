@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>evently</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -96,7 +96,21 @@
         </div>
     </div>
 
-    <div class="checkbox">
+    <div class="form-group">
+        <label for="Status">Status:</label>
+
+        <div class="input-area">
+            <select id="status">
+                <option value="" selected disabled>Pilih Status</option>
+                <option value="pending">Pending</option>
+                <option value="approve">Approve</option>
+                <option value="reject">Reject</option>
+            </select>
+            <small id="errorstatus" class="error"></small>
+        </div>
+    </div>
+    
+     <div class="checkbox">
         <input type="checkbox" id="syarat"> 
         <label for="Syarat">saya menyetujui syarat dan ketentuan</label>
     </div>
@@ -104,7 +118,7 @@
     <div class="button-area">
         <button type="submit" id="btndaftar" disabled>Daftar Sekarang</button>
     </div>
-    
+
         </form>
     </div>
     <script src="js/script.js"></script>
